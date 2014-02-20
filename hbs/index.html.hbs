@@ -3,11 +3,14 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
+    <title>Pure FrontEnd Application</title>
+
     {{#each libScripts}}
     <script src="lib/{{this}}" type="text/javascript" charset="utf-8"></script>
     {{/each}}
 
     <script src="js/{{appScript}}" type="text/javascript" charset="utf-8"></script>
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel='stylesheet' type="text/css" />
 
     <!-- <script src="hbs.js" type="text/javascript" charset="utf&#45;8"></script> -->
   </head>
