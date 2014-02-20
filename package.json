@@ -1,0 +1,24 @@
+{
+  "name": "purefrtend",
+  "version": "0.0.0",
+  "description": "A boilerplate for pure front end web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddhp/purefrtend.git"
+  },
+  "keywords": [
+    "front-end",
+    "ember",
+    "bootstrap"
+  ],
+  "author": "ddhp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddhp/purefrtend/issues"
+  },
+  "homepage": "https://github.com/ddhp/purefrtend"
+}
