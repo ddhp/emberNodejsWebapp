@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ddhp/purefrtend/issues"
   },
-  "homepage": "https://github.com/ddhp/purefrtend"
+  "homepage": "https://github.com/ddhp/purefrtend",
+  "dependencies": {
+    "grunt": "~0.4.2"
+  }
 }
