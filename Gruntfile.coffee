@@ -15,13 +15,14 @@ scripts = {
       'jquery/jquery.min.js'
       # 'moment/min/moment.min.js'
       'bootstrap/dist/js/bootstrap.min.js'
-      'handlebars/handlebars.runtime.js'
+      'handlebars/handlebars.runtime.min.js'
       'ember/ember.min.js'
       # 'ember-data/ember-data.min.js'
     ]
   }
 
   app: [
+    "emberHbs.js"
     "init.js"
     "application.js"
   ]
@@ -37,7 +38,7 @@ module.exports = (grunt)->
         files: [
           expand: true
           cwd: './'
-          src: ['coffee/**/*.coffee', 'server/**/*.coffee']
+          src: ['src/**/*.coffee', 'server/**/*.coffee']
           ext: '.js'
         ]
 
@@ -60,6 +61,13 @@ module.exports = (grunt)->
           appScript: "app.min.js"
         output: 'index.html'
 
+    "emberTemplates":
+      default:
+        options:
+          templateBasePath: /hbs\//
+        files:
+          'src/emberHbs.js': 'hbs/**/*.hbs'
+
     exec:
       server:
         cmd: 'node server/server.js'
@@ -67,7 +75,7 @@ module.exports = (grunt)->
     concat:
       app:
         src: scripts.app.map (script)->
-          return "coffee/#{script}"
+          return "src/#{script}"
         dest: 'js/app.js'
 
     uglify: {
@@ -87,10 +95,22 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-exec')
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-compile-handlebars')
+  grunt.loadNpmTasks('grunt-ember-templates')
 
   # Default task(s).
   grunt.registerTask('default', ['coffee'])
   grunt.registerTask('server', ['exec:server'])
-  grunt.registerTask('dev', ['coffee', 'concat:app', 'compile-handlebars:dev'])
-  grunt.registerTask('prod', ['coffee', 'concat:app', 'uglify', 'compile-handlebars:production'])
+  grunt.registerTask('dev', [
+    'coffee',
+    'emberTemplates',
+    'concat:app',
+    'compile-handlebars:dev'
+  ])
+  grunt.registerTask('prod', [
+    'coffee',
+    'emberTemplates'
+    'concat:app',
+    'uglify',
+    'compile-handlebars:production'
+  ])
 
