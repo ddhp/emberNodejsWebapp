@@ -1,0 +1,18 @@
+// Emberjs add class active to <a> instead of <li> when entering a href
+// fix the active style to <a>
+.navbar-inverse {
+  .navbar-nav {
+    > li > a.active {
+      color: @navbar-inverse-link-active-color;
+      background-color: @navbar-inverse-link-active-bg;
+    }
+  }
+}
+.navbar {
+  .navbar-nav {
+    > li > a.active {
+      color: @navbar-default-link-active-color;
+      background-color: @navbar-default-link-active-bg;
+    }
+  }
+}
