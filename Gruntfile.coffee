@@ -22,8 +22,13 @@ scripts = {
   }
 
   app: [
-    "emberHbs.js"
     "application.js"
+    "example_controller.js"
+    # Concat navigation to the last controller
+    # b/c we setup our router here
+    "navigation.js"
+    # Concat ember handlebars last
+    "emberHbs.js"
   ]
 }
 

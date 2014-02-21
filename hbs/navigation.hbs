@@ -1,0 +1,10 @@
+<ul>
+  <li>
+  {{#link-to "index"}}Home{{/link-to}}
+  </li>
+  {{#each pages}}
+  <li>
+  {{#link-to this.id}}{{{screenName}}}{{/link-to}}
+  </li>
+  {{/each}}
+</ul>
