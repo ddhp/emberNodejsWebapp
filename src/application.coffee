@@ -1,1 +1,1 @@
-console.log "this is application controller"
+App = Ember.Application.create()

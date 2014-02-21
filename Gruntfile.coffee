@@ -23,7 +23,6 @@ scripts = {
 
   app: [
     "emberHbs.js"
-    "init.js"
     "application.js"
   ]
 }
