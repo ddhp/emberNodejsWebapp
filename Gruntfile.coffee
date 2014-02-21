@@ -33,6 +33,18 @@ module.exports = (grunt)->
   # Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    less:
+      dev:
+        files:
+          "css/app.css": "less/app.less"
+      prod:
+        options:
+          compress: true
+          cleancss: true
+        files:
+          "css/app.min.css": "less/app.less"
+
     coffee:
       default:
         files: [
@@ -47,7 +59,7 @@ module.exports = (grunt)->
         template: 'hbs/index.html.hbs'
         templateData:
           production: false
-          mainCss: 'css/main.css'
+          appCss: 'css/app.css'
           libScripts: scripts.lib.dev
           appScript: "app.js"
         output: 'index.html'
@@ -56,7 +68,7 @@ module.exports = (grunt)->
         template: 'hbs/index.html.hbs'
         templateData:
           production: true
-          mainCss: 'css/main.css'
+          appCss: 'css/app.min.css'
           libScripts: scripts.lib.prod
           appScript: "app.min.js"
         output: 'index.html'
@@ -96,18 +108,21 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-contrib-concat')
   grunt.loadNpmTasks('grunt-compile-handlebars')
   grunt.loadNpmTasks('grunt-ember-templates')
+  grunt.loadNpmTasks('grunt-contrib-less')
 
   # Default task(s).
   grunt.registerTask('default', ['coffee'])
   grunt.registerTask('server', ['exec:server'])
   grunt.registerTask('dev', [
     'coffee',
+    'less:dev',
     'emberTemplates',
     'concat:app',
     'compile-handlebars:dev'
   ])
   grunt.registerTask('prod', [
     'coffee',
+    'less:prod',
     'emberTemplates'
     'concat:app',
     'uglify',
