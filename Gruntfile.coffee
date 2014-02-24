@@ -32,6 +32,11 @@ scripts = {
   ]
 }
 
+# web spider variables
+keywords = ""
+
+description = ""
+
 module.exports = (grunt)->
 
   # Project configuration.
@@ -66,6 +71,8 @@ module.exports = (grunt)->
           appCss: 'css/app.css'
           libScripts: scripts.lib.dev
           appScript: "app.js"
+          keywords: keywords
+          description: description
         output: 'index.html'
 
       production:
@@ -75,6 +82,8 @@ module.exports = (grunt)->
           appCss: 'css/app.min.css'
           libScripts: scripts.lib.prod
           appScript: "app.min.js"
+          keywords: keywords
+          description: description
         output: 'index.html'
 
     "emberTemplates":

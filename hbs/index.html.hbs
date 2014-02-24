@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
     <title>Pure FrontEnd Application</title>
+
+    <!-- meta tags -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="{{keywords}}">
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+    <meta name="description" content="{{description}}">
+
+    <!-- css  -->
     <link href="{{appCss}}" rel='stylesheet' type="text/css" />
 
+    <!-- lib  -->
     {{#each libScripts}}
     <script src="lib/{{this}}" type="text/javascript" charset="utf-8"></script>
     {{/each}}
 
+    <!-- js  -->
     <script src="js/{{appScript}}" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
