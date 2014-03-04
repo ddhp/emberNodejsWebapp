@@ -1,3 +1,3 @@
 module.exports =
   contextURL: "/appstore/api"
-  port: "4447"
+  port: "2222"

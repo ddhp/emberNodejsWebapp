@@ -22,13 +22,13 @@ scripts = {
   }
 
   app: [
-    "application.js"
-    "example_controller.js"
+    "controller/application.js"
+    "controller/example_controller.js"
     # Concat navigation to the last controller
     # b/c we setup our router here
-    "navigation.js"
+    "controller/navigation.js"
     # Concat ember handlebars last
-    "emberHbs.js"
+    "hbs/emberHbs.js"
   ]
 }
 
@@ -65,7 +65,7 @@ module.exports = (grunt)->
 
     'compile-handlebars':
       dev:
-        template: 'hbs/index.html.hbs'
+        template: 'src/hbs/index.html.hbs'
         templateData:
           production: false
           appCss: 'css/app.css'
@@ -76,7 +76,7 @@ module.exports = (grunt)->
         output: 'index.html'
 
       production:
-        template: 'hbs/index.html.hbs'
+        template: 'src/hbs/index.html.hbs'
         templateData:
           production: true
           appCss: 'css/app.min.css'
@@ -89,9 +89,9 @@ module.exports = (grunt)->
     "emberTemplates":
       default:
         options:
-          templateBasePath: /hbs\//
+          templateBasePath: /src\/hbs\//
         files:
-          'src/emberHbs.js': 'hbs/**/*.hbs'
+          'src/hbs/emberHbs.js': 'src/hbs/**/*.hbs'
 
     exec:
       server:
