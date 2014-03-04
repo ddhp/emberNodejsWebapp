@@ -2,13 +2,17 @@ window.App = Ember.Application.create()
 
 # App.pages store all pages controlled by navigation controller
 # extend App.page and push it into App.pages
-# these will be shown by order of your push
+# these will be shown by order of key:sort
 
 App.Page = Ember.Object.extend(
-  # id will be treat as route name and default route url
-  id: Ember.computed(->
-    throw new Error 'You must specify an id'
-  ).property()
+  init: ->
+    unless @get("id")
+      throw new Error 'You must specify an id'
+    pages = App.get("pages")
+    pages.push(this)
+    pages.sort((a, b)->
+      return a.sort-b.sort
+    )
 
   defineRoute: Ember.computed ->
     id = @get('id').toString()
@@ -19,6 +23,8 @@ App.Page = Ember.Object.extend(
   screenName: Ember.computed(->
     return Ember.String.capitalize(@get('id').toString())
   ).property()
+
+  sort: Infinity
 )
 
 App.pages = []
@@ -26,5 +32,6 @@ App.pages = []
 # [].push.call(App.pages, App.Page.create(
 #   id: "route-name"
 #   screenName: "name shown"
+#   sort: 1
 #   )
 # )

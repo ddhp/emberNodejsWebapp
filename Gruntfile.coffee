@@ -30,6 +30,18 @@ scripts = {
     # Concat ember handlebars last
     "hbs/emberHbs.js"
   ]
+
+  karma: [
+    # 'lodash/dist/lodash.js'
+    'lib/jquery/jquery.js'
+    # 'moment/moment.js'
+    'lib/bootstrap/dist/js/bootstrap.js'
+    'lib/handlebars/handlebars.js'
+    'lib/ember/ember.js'
+    # 'ember-data/ember-data.js'
+    'js/app.js'
+    'test/**/*.js'
+  ]
 }
 
 # web spider variables
@@ -59,7 +71,7 @@ module.exports = (grunt)->
         files: [
           expand: true
           cwd: './'
-          src: ['src/**/*.coffee', 'server/**/*.coffee']
+          src: ['src/**/*.coffee', 'server/**/*.coffee', 'test/**/*.coffee']
           ext: '.js'
         ]
 
@@ -112,6 +124,17 @@ module.exports = (grunt)->
         dest: 'js/app.min.js'
       }
     }
+
+    karma: {
+      unit: {
+        options: {
+          files: scripts.karma
+        }
+        browsers: ['PhantomJS']
+        frameworks: ['qunit']
+        singleRun: true
+      }
+    }
   })
 
   # Load the plugin that provides the "uglify" task.
@@ -122,6 +145,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-compile-handlebars')
   grunt.loadNpmTasks('grunt-ember-templates')
   grunt.loadNpmTasks('grunt-contrib-less')
+  grunt.loadNpmTasks('grunt-karma')
 
   # Default task(s).
   grunt.registerTask('default', ['coffee'])
@@ -141,4 +165,6 @@ module.exports = (grunt)->
     'uglify',
     'compile-handlebars:production'
   ])
+
+  grunt.registerTask('test', ['dev', 'karma'])
 
