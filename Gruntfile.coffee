@@ -23,7 +23,7 @@ scripts = {
 
   app: [
     "controller/application.js"
-    "controller/example_controller.js"
+    "controller/machines.js"
     # Concat navigation to the last controller
     # b/c we setup our router here
     "controller/navigation.js"
