@@ -23,5 +23,9 @@
     <script src="js/{{appScript}}" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+  <!-- livereload of grunt -->
+  {{#unless production}}
+  <script src="//localhost:35729/livereload.js"></script>
+  {{/unless}}
   </body>
 </html>

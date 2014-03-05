@@ -156,6 +156,24 @@ module.exports = (grunt)->
         }
       }
     }
+
+    watch: {
+      options: {
+        livereload: true
+      }
+      src: {
+        files: ['src/**/*.coffee']
+        tasks: ['coffee', 'concat:app']
+      }
+      less: {
+        files: ['less/*.less']
+        tasks: ['less:dev']
+      }
+      hbs: {
+        files: ['src/hbs/*.hbs']
+        tasks: ['emberTemplates', 'concat:app', 'compile-handlebars:dev']
+      }
+    }
   })
 
   # Load the plugin that provides the "uglify" task.
@@ -167,6 +185,7 @@ module.exports = (grunt)->
   grunt.loadNpmTasks('grunt-ember-templates')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-karma')
+  grunt.loadNpmTasks('grunt-contrib-watch')
 
   # Default task(s).
   grunt.registerTask('default', ['coffee'])
