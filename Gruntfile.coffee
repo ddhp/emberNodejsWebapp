@@ -58,9 +58,9 @@ scripts = {
 }
 
 # web spider variables
-keywords = ""
+keywords = "Facial tissue making machine, Paper napkin making machine, Single fold hand towel machine, Multifold hand towel machine, C-fold paper hand towel machine, Facial tissue log saw, Facial tissue interfolder Napkin folder, Luncheon napkin folder Beverage napkin folder, "
 
-description = ""
+description = "Ocean Associate is a leading Paper napkin making machine and Facial tissue making machine manufacturer specialized in Facial tissue making machine, Single fold hand towel machine, Multifold hand towel machine, Paper napkin making machine, Facial tissue log saw, C-fold paper hand towel machine, Napkin folder, Facial tissue interfolder, Beverage napkin folder, and Luncheon napkin folder."
 
 module.exports = (grunt)->
 
