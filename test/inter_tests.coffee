@@ -1,13 +1,25 @@
-module("Index Page", {
-  setup: ->
+assert = chai.assert
+describe("Index Page", ->
+  beforeEach( ->
     App.reset()
-})
+    visit("/")
+  )
 
-test("Index page intergration test", ->
-  visit("/")
-  andThen(->
-    ok(find("header"), "header should be rendered")
-    ok(find("nav"), "nav should be rendered")
-    ok(find("footer"), "footer should be rendered")
+  describe("Header", ->
+    it('should be there', ->
+      andThen(-> assert.ok(find("header")))
+    )
+  )
+
+  describe("Navigation", ->
+    it('should be there', ->
+      andThen(-> assert.ok(find("nav")))
+    )
+  )
+
+  describe("Footer", ->
+    it('should be there', ->
+      andThen(-> assert.ok(find("footer")))
+    )
   )
 )

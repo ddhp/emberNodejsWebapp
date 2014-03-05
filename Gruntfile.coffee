@@ -131,8 +131,14 @@ module.exports = (grunt)->
           files: scripts.karma
         }
         browsers: ['PhantomJS']
-        frameworks: ['qunit']
+        frameworks: ['mocha', 'chai']
+        reporters: ['mocha']
         singleRun: true
+        client: {
+          mocha: {
+            ui: 'bdd'
+          }
+        }
       }
     }
   })
