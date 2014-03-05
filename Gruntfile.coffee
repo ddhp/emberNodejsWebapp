@@ -31,17 +31,30 @@ scripts = {
     "hbs/emberHbs.js"
   ]
 
-  karma: [
-    # 'lodash/dist/lodash.js'
-    'lib/jquery/jquery.js'
-    # 'moment/moment.js'
-    'lib/bootstrap/dist/js/bootstrap.js'
-    'lib/handlebars/handlebars.js'
-    'lib/ember/ember.js'
-    # 'ember-data/ember-data.js'
-    'js/app.js'
-    'test/**/*.js'
-  ]
+  karma: {
+    unit: [
+      # 'lodash/dist/lodash.js'
+      'lib/jquery/jquery.js'
+      # 'moment/moment.js'
+      'lib/bootstrap/dist/js/bootstrap.js'
+      'lib/handlebars/handlebars.js'
+      'lib/ember/ember.js'
+      # 'ember-data/ember-data.js'
+      'js/app.js'
+      'test/unit/*.js'
+    ]
+    integration: [
+      # 'lodash/dist/lodash.js'
+      'lib/jquery/jquery.js'
+      # 'moment/moment.js'
+      'lib/bootstrap/dist/js/bootstrap.js'
+      'lib/handlebars/handlebars.js'
+      'lib/ember/ember.js'
+      # 'ember-data/ember-data.js'
+      'js/app.js'
+      'test/integration/*.js'
+    ]
+  }
 }
 
 # web spider variables
@@ -126,18 +139,20 @@ module.exports = (grunt)->
     }
 
     karma: {
-      unit: {
-        options: {
-          files: scripts.karma
-        }
+      options: {
         browsers: ['PhantomJS']
         frameworks: ['mocha', 'chai']
         reporters: ['mocha']
         singleRun: true
-        client: {
-          mocha: {
-            ui: 'bdd'
-          }
+      },
+      unit: {
+        options: {
+          files: scripts.karma.unit
+        }
+      },
+      integration: {
+        options: {
+          files: scripts.karma.integration
         }
       }
     }
