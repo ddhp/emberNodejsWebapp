@@ -30,6 +30,9 @@ scripts = {
     "model/line.js"
     "model/contact.js"
 
+    # mixin
+    "mixin/verifyForm.js"
+
     # view
     "view/verifyInput.js"
 

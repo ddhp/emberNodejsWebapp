@@ -49,7 +49,7 @@ App.Machines = [{
   line: "napkin-folders"
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
-  description: "CH330 is our classical high-speed napkin folding solution for 1/4 and 1/8 folding.<br />This series is available in 6 lane (deck) for Tall Fold Napkin; 4 deck for Beverage Napkin; 3 deck for luncheon napkin.<br />This high speed solution is capable of producing napkin at 1000-1500 sheet per deck. The machine can "
+  description: "CH330 is our classical high-speed napkin folding solution for 1/4 and 1/8 folding.<br />This series is available in 6 lane (deck) for Tall Fold Napkin; 4 deck for Beverage Napkin; 3 deck for luncheon napkin.<br />This high speed solution is capable of producing napkin at 1000-1500 sheet per deck."
   options: [{
     name: "Emboss and Lamination"
     lists: [

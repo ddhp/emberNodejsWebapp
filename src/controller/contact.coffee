@@ -21,10 +21,61 @@ App.ContactRoute = Ember.Route.extend(
     apiDiv.appendChild(script)
 )
 
-App.ContactController = Ember.ObjectController.extend(
+App.ContactController = Ember.ObjectController.extend(App.VerifyFormMixin,
+  formInputs: [{
+    key: "name"
+    isNecessary: true
+    isValid: false
+  },{
+    key: "company"
+    isNecessary: true
+    isValid: false
+  },{
+    key: "email"
+    isNecessary: true
+    isValid: false
+  },{
+    key: "phone"
+    isNecessary: false
+    isValid: false
+  },{
+    key: "message"
+    isNecessary: true
+    isValid: false
+  }]
+  submitText: "Submit"
+  isSuccess: false
+  isError: false
+
+  reset: ->
+    @setProperties(
+      isSuccess: false
+      isError: false
+    )
+
   actions: {
     submit: ->
-      App.Contact.submit(@get("model"))
+      return if @get("isSubmitting")
+      @setProperties(
+        isSubmitting: true
+        submitText: "Submitting..."
+      )
+      saving = App.Contact.submit(@get("model"))
+      saving.always(=>
+        @setProperties(
+          isSubmitting: false
+          submitText: "Submit"
+        )
+        Ember.run.later(this, @reset, 5000)
+      )
+      saving.done((res)=>
+        console.log "Message successfully sent"
+        @set("isSuccess", true)
+      )
+      saving.fail((err)=>
+        console.log "Failed to sent message"
+        @set("isError", true)
+      )
   }
 )
 

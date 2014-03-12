@@ -12,13 +12,19 @@
     <div class="col-md-8">
       <h4>Get in touch with us by filling contact form below</h4>
       <form role="form">
-        {{view App.VerifyInputDivView inputType="text" key="name" value=name isNecessary=true}}
-        {{view App.VerifyInputDivView inputType="text" key="company" value=company isNecessary=true}}
-        {{view App.VerifyInputDivView inputType="text" key="email" value=email isNecessary=true}}
-        {{view App.VerifyInputDivView inputType="text" key="phone" value=phone isNecessary=false}}
-        {{view App.VerifyInputDivView inputType="textArea" key="message" value=message isNecessary=true}}
+        {{view App.VerifyInputView inputType="text" verifyType="length" key="name" value=name isNecessary=true}}
+        {{view App.VerifyInputView inputType="text" verifyType="length" key="company" value=company isNecessary=true}}
+        {{view App.VerifyInputView inputType="text" verifyType="email" key="email" value=email isNecessary=true}}
+        {{view App.VerifyInputView inputType="text" verifyType="phone" key="phone" value=phone isNecessary=false}}
+        {{view App.VerifyInputView inputType="textArea" verifyType="length" key="message" value=message isNecessary=true}}
 
-        <button type="button" class="btn btn-primary" {{action "submit"}}>Submit</button>
+        {{#if isError}}
+        <p {{bind-attr class=":alert :alert-danger :fade isError:in"}}>Something wrong with server, please try again later.</p>
+        {{/if}}
+        {{#if isSuccess}}
+        <p class="alert alert-info">Message sent successfully, we will reply very soon!</p>
+        {{/if}}
+        <button {{bind-attr class=":btn :btn-primary isReady::disabled isSubmitting:disabled"}} type="button" class="btn btn-primary" {{action "submit"}}>{{submitText}}</button>
       </form>
     </div>
 
