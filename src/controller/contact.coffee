@@ -71,15 +71,18 @@ App.ContactController = Ember.ObjectController.extend(App.VerifyFormMixin,
           isSubmitting: false
           submitText: "Submit"
         )
-        Ember.run.later(this, @reset, 5000)
       )
       saving.done((res)=>
         console.log "Message successfully sent"
         @set("isSuccess", true)
+        Ember.run.later(this, @reset, 5000)
       )
       saving.fail((err)=>
         console.log "Failed to sent message"
         @set("isError", true)
+        Ember.run.later(this, ->
+          @set("isError", false)
+        , 5000)
       )
   }
 )
