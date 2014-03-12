@@ -51,6 +51,11 @@ App.ContactController = Ember.ObjectController.extend(App.VerifyFormMixin,
     @setProperties(
       isSuccess: false
       isError: false
+      name: ""
+      company: ""
+      email: ""
+      phone: ""
+      message: ""
     )
 
   actions: {

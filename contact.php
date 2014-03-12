@@ -2,10 +2,11 @@
 $name = $_POST[name];
 $company = $_POST[company];
 $message = $_POST[message];
+$email = $_POST[email];
 $phone = $_POST[phone];
 if (($phone) == '') {
-  $phone = "Not provided"
-}
+  $phone = "Not provided";
+};
 // $to = "chiayuanh@ocn.com.tw";
 $to = "sevenknee@gmail.com";
 $subject = "A message from customer";
@@ -16,6 +17,8 @@ $message .= '<h4>Name</h4>';
 $message .= '<p><strong>' . $name . '</strong></h4>';
 $message .= '<h4>Company</h4>';
 $message .= '<p><strong>' . $company . '</strong></h4>';
+$message .= '<h4>Email</h4>';
+$message .= '<p><strong>' . $email . '</strong></h4>';
 $message .= '<h4>Phone</h4>';
 $message .= '<p><strong>' . $phone . '</strong></h4>';
 $message .= '<h4>Message</h4>';

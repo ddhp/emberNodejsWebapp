@@ -22,7 +22,7 @@
         <p {{bind-attr class=":alert :alert-danger :fade isError:in"}}>Something wrong with server, please try again later.</p>
         {{/if}}
         {{#if isSuccess}}
-        <p class="alert alert-info">Message sent successfully, we will reply very soon!</p>
+        <p {{bind-attr class=":alert :alert-info :fade isError:in"}}>Message sent successfully, we will reply very soon!</p>
         {{/if}}
         <button {{bind-attr class=":btn :btn-primary isReady::disabled isSubmitting:disabled"}} type="button" class="btn btn-primary" {{action "submit"}}>{{submitText}}</button>
       </form>

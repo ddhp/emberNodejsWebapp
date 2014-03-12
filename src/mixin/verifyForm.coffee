@@ -30,6 +30,6 @@ App.VerifyFormMixin = Ember.Mixin.create(
       # set "isOneInputLeft" to true when there is only one
       i = 0
       for input in @get("formInputs")
-        i++ if input.isValid is false
+        i++ if input.isValid is false and input.isNecessary is true
       @set("isOneInputLeft", true) if i is 1
 )
