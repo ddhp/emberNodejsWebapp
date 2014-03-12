@@ -1,4 +1,4 @@
-keys = ["name", "company", "phone", "message"]
+keys = ["name", "company", "phone", "message", "email"]
 contactModel = Ember.Object.extend()
 App.Contact = contactModel.reopenClass(
   submit: (contact)->

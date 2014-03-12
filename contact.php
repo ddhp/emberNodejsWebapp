@@ -1,7 +1,7 @@
 <?php
 $name = $_POST[name];
 $company = $_POST[company];
-$message = $_POST[message];
+$userMessage = $_POST[message];
 $email = $_POST[email];
 $phone = $_POST[phone];
 if (($phone) == '') {
@@ -12,17 +12,15 @@ $to = "sevenknee@gmail.com";
 $subject = "A message from customer";
 // $message = "Hello! This is a simple email message.";
 $message = '<html><body>';
-$message .= 'Here is the message from customer:';
-$message .= '<h4>Name</h4>';
-$message .= '<p><strong>' . $name . '</strong></h4>';
-$message .= '<h4>Company</h4>';
-$message .= '<p><strong>' . $company . '</strong></h4>';
-$message .= '<h4>Email</h4>';
-$message .= '<p><strong>' . $email . '</strong></h4>';
-$message .= '<h4>Phone</h4>';
-$message .= '<p><strong>' . $phone . '</strong></h4>';
-$message .= '<h4>Message</h4>';
-$message .= '<p><strong>' . $message . '</strong></h4>';
+$message .= 'This is a reminder to inform you that there is a inquery from official website("www.ocn.com.tw")'
+$message .= 'Here is the information from customer:';
+$message .= '<hr>';
+$message .= '<p>Name: <strong>' . $name . '</strong></h4>';
+$message .= '<p>Company: <strong>' . $company . '</strong></h4>';
+$message .= '<p>Email: <strong>' . $email . '</strong></h4>';
+$message .= '<p>Phone: <strong>' . $phone . '</strong></h4>';
+$message .= '<p>Message: <strong>' . $userMessage . '</strong></h4>';
+$message .= '<hr>';
 $message .= "</body></html>";
 
 $from = "reminder@ocn.com.tw";
