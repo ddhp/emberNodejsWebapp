@@ -1,9 +1,13 @@
 window.App = Ember.Application.create()
+App.config = {
+  gmapKey: "AIzaSyB2dwuEYrEYwdJPr5gr4jOrMfMn2oUHXh4" # localhost
+  # gmapKey: "AIzaSyCTjldvMCQVumRriCEjkprbzcFnqOlKiy4" # yunlidesign
+  # gmapKey: "AIzaSyCYVw62An-g18yYWeGC55eSrFLVCvDwAqQ" # ocn.com.tw
+}
 
 # App.pages store all pages controlled by navigation controller
 # extend App.page and push it into App.pages
 # these will be shown by order of key:sort
-
 App.Page = Ember.Object.extend(
   init: ->
     unless @get("id")

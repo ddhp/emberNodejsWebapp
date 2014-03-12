@@ -17,7 +17,7 @@ App.ContactRoute = Ember.Route.extend(
       apiDiv.removeChild("script")
     script = document.createElement("script")
     script.type = "text/javascript"
-    script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyB2dwuEYrEYwdJPr5gr4jOrMfMn2oUHXh4&sensor=false&callback=mapInitializer"
+    script.src = "http://maps.googleapis.com/maps/api/js?key=#{App.config.gmapKey}&sensor=false&callback=mapInitializer"
     apiDiv.appendChild(script)
 )
 
