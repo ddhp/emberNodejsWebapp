@@ -22,8 +22,22 @@ scripts = {
   }
 
   app: [
-    "controller/application.js"
-    "controller/machines.js"
+    # init 
+    "initialize.js"
+
+    # model
+    "model/machine.js"
+    "model/line.js"
+    "model/contact.js"
+
+    # view
+    "view/verifyInput.js"
+
+    # controller
+    "controller/index.js"
+    "controller/lines.js"
+    "controller/machine.js"
+    "controller/contact.js"
     # Concat navigation to the last controller
     # b/c we setup our router here
     "controller/navigation.js"

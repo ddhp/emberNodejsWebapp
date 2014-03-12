@@ -1,0 +1,20 @@
+.img-container {
+  overflow: hidden;
+  position: relative;
+  // you need to specify width and height to make it work
+
+  & .img-centerer {
+    width: 2000px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -1000px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+

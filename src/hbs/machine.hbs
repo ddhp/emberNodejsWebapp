@@ -1,0 +1,28 @@
+<div class="col-md-9 machine" role="main">
+<h4 class="name">{{name}}</h4>
+<img {{bind-attr src=image alt=name}} class="img-responsive"/>
+
+<h4 class="serial"><img {{bind-attr src=producerImg alt=producer}} /> {{serial}}</h4>
+<h5>Description</h5>
+<p>{{{description}}}</p>
+
+{{#if options}}
+<h5>Options</h5>
+{{#each option in options}}
+
+<dl class="dl-horizontal">
+  <dt>{{option.name}}</dt>
+  {{#each list in option.lists}}
+  <dd>{{list}}</dd>
+  {{/each}}
+</dl>
+
+{{/each}}
+{{/if}}
+
+<h5>For further information</h5>
+{{#link-to "contact"}}
+<button type="button" class="btn btn-primary">Contact us</button>
+{{/link-to}}
+
+</div>

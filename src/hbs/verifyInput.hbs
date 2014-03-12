@@ -1,0 +1,21 @@
+<!-- div with class 'form&#45;group' is created by view -->
+  <label for="{{view.key}}">{{capitalize view.key}} 
+    {{#if view.isNecessary}}
+    <span class="necessary">&#42;</span>
+    {{/if}}
+  </label>
+  {{#if view.isText}}
+  {{input type="text" value=view.value class="form-control" placeholder=view.placeholder}}
+  {{/if}}
+
+  {{#if view.isTextArea}}
+  {{textarea value=view.value class="form-control" placeholder=view.placeholder rows=view.rows}}
+  {{/if}}
+  
+  {{#if view.isValid}}
+    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+  {{/if}}
+  {{#if view.isInvalid}}
+    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+  {{/if}}
+

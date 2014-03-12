@@ -1,1 +1,28 @@
-<h2>Landing page</h2>
+{{render "carousel"}}
+
+<div class="container index-container">
+  <div class="row service-wrapper">
+    <h4>Machines we have</h4>
+    {{#each line in lines}}
+    <div class="col-md-4 col-xs-12">
+      <div class="service">
+        <div class="img-container">
+          <div class="img-centerer">
+            <img {{bind-attr src=line.image alt=line.name}} />
+          </div>
+        </div>
+        <h4>{{line.name}}</h4>
+        <p class="featuring">
+          <span>featuring</span><br />
+          {{#each feature in line.features}}
+          {{feature}}<br />
+          {{/each}}
+        </p>
+        {{#link-to "machine" line.id line.defaultMachine}}
+        <button type="button" class="btn btn-primary">See detail</button>
+        {{/link-to}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.main-content-bg {
+  > .lines-container {
+    background-color: #F6F6F9;
+  }
+}
+
+.nav-lines {
+  // .box-shadow(2px 0 3px rgba(0,0,0,.1));
+  padding-top: 10px;
+  > ul > li { // First nav
+    font-family: @headings-font-family;
+    color: @gray-light;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    > ul > a {
+      text-decoration: none;
+    }
+    > ul > a > li { // Sub nav
+      color: @brand-primary;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: transparent;
+      &.active, &:hover {
+        border-bottom-color: @brand-primary;
+      }
+    }
+  }
+}

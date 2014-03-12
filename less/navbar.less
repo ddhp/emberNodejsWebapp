@@ -10,9 +10,13 @@
 }
 .navbar {
   .navbar-nav {
-    > li > a.active {
+    > li > a.active, > li > a.active:hover {
       color: @navbar-default-link-active-color;
-      // background-color: @navbar-default-link-active-bg;
+      background-color: @navbar-default-link-active-bg;
+    }
+    > li > a:hover {
+      color: @navbar-default-link-hover-color;
+      background-color: @navbar-default-link-hover-bg;
     }
   }
 }
@@ -26,14 +30,14 @@
   .navbar-nav > li {
     margin-left: 4px;
     > a {
-      padding-top: 22px;
-      padding-bottom: 22px;
+      padding-top: 18px;
+      padding-bottom: 18px;
       padding-right: 20px;
       padding-left: 20px;
       line-height: 41px;
       text-transform: uppercase;
 
-      &.active:hover, &.active:after {
+      &.active:after {
         position: absolute;
         display: block;
         width: 0;

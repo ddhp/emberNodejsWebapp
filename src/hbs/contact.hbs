@@ -1,0 +1,41 @@
+<div class="container contact-container">
+  <div class="row">
+
+    <div class="col-md-12">
+      <h4>Find us here</h4>
+      <div id="map_canvas" class="map_canvas"></div>
+    </div>
+
+  </div>
+  <div class="row">
+    
+    <div class="col-md-8">
+      <h4>Get in touch with us by filling contact form below</h4>
+      <form role="form">
+        {{view App.VerifyInputDivView inputType="text" key="name" value=name isNecessary=true}}
+        {{view App.VerifyInputDivView inputType="text" key="company" value=company isNecessary=true}}
+        {{view App.VerifyInputDivView inputType="text" key="email" value=email isNecessary=true}}
+        {{view App.VerifyInputDivView inputType="text" key="phone" value=phone isNecessary=false}}
+        {{view App.VerifyInputDivView inputType="textArea" key="message" value=message isNecessary=true}}
+
+        <button type="button" class="btn btn-primary" {{action "submit"}}>Submit</button>
+      </form>
+    </div>
+
+    <div class="col-md-4"> 
+      <h4>Contact information</h4>
+      <dl>
+        <dt><span class="glyphicon glyphicon-home"></span>&nbsp;Address:</dt>
+        <dd>6F, No. 75, Sec. 3, Chung King North Road, Taipei 103, Taiwan</dd>
+        <dt><span class="glyphicon glyphicon-earphone"></span>&nbsp;Phone:</dt>
+        <dd>886-2-2597-1299</dd>
+        <dt><span class="glyphicon glyphicon-print"></span>&nbsp;Fax:</dt>
+        <dd>886-2-2597-1300</dd>
+        <dt><span class="glyphicon glyphicon-envelope"></span>&nbsp;E-mail:</dt>
+        <dd>ocn@ms12.hinet.net</dd>
+      </dl>
+
+    </div>
+
+  </div>
+</div>

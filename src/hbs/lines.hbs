@@ -1,0 +1,21 @@
+<div class="container lines-container">
+  <div class="row">
+    <div class="col-md-3 nav-lines" role="complementary">
+    <ul class="list-unstyled">
+      {{#each line in model}}
+        <li>
+          {{line.name}}
+          <ul>
+            {{#each machine in line.machines}}
+               {{#link-to "machine" line.id machine.id}}
+               {{#link-to "machine" line.id machine.id tagName="li"}} {{machine.serial}} {{/link-to}}
+               {{/link-to}}
+            {{/each}}
+          </ul>
+        </li>
+      {{/each}}
+    </ul>
+    </div>
+    {{outlet}}
+  </div>
+</div>

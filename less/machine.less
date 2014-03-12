@@ -1,0 +1,53 @@
+.machine {
+  // .box-shadow(inset 2px 0 1px rgba(0,0,0,.2));
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: white;
+
+  .serial {
+    color: @gray-light;
+  }
+  .name {
+    color: @brand-primary;
+  }
+
+  table {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lighten(#000, 72%);
+    color: @brand-primary;
+    tbody > tr:nth-child(1) > td:nth-child(1) {
+      background-color: @gray-lighter;
+    }
+  }
+
+  dl {
+    border-style: solid;
+    border-width: 1px;
+    border-color: lighten(#000, 72%);
+    background-color: @gray-lighter;
+    border-radius: 3px;
+    font-family: @headings-font-family;
+    color: lighten(#000, 50%);
+  }
+
+  dt {
+    color: @brand-primary;
+    width: 220px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: normal;
+  }
+
+  dd {
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: lighten(#000, 69%);
+    margin-left: 220px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+  }
+}

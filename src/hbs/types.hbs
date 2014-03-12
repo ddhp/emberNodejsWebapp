@@ -1,0 +1,18 @@
+<div class="col-md-3 nav-machines" role="complementary">
+  <ul class="list-unstyled">
+    {{#each type in model}}
+      <li>
+        {{type.name}}
+        <ul>
+          {{#each serial in type.serials}}
+             {{#link-to "machine" type.id serial}}
+             {{#link-to "machine" type.id serial tagName="li"}} {{serial}} {{/link-to}}
+             {{/link-to}}
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+{{outlet}}
