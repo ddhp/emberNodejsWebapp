@@ -2,13 +2,13 @@
   <header class="container">
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4 hidden-xs">
         <h1>{{#link-to "index"}}
         <img src="images/ocean-logo-2.png" alt="Ocean Associate" />
         {{/link-to}}</h1>
       </div>
       
-      <div class="col-md-8">
+      <div class="col-md-8 col-sm-8">
         {{render "navigation"}}
       </div>
       
@@ -22,18 +22,41 @@
 
 <div class="footer-bg">
   <div class="container">
-    <div class="pull-left logo">
-      <!-- <img src="images/ocean&#45;logo&#45;circle&#45;2.png" alt="Ocean Associate Circle Logo" />   -->
-      <img src="images/ocean-chiaHoung-logo.png" alt="Ocean Associate and Chia Houng logo" />  
-    </div>
-    <div class="pull-left">
-    <h4>
-      OCEAN ASSOCIATE
-    </h4>
-    <h4>
-      CHIA HOUNG MACHINERY
-    </h4>
-    <p>Established in 1981. We are manufacturers and exporters of tissue paper converting machines in Taiwan for 33 years.</p>
+    <div class="row">
+      <div class="col-md-8">
+        <h4>About us</h4>
+        <div class="media">
+          <div class="pull-left logo">
+            <!-- <img src="images/ocean&#45;logo&#45;circle&#45;2.png" alt="Ocean Associate Circle Logo" />   -->
+            <img src="images/ocean-chiaHoung-logo.png" alt="Ocean Associate and Chia Houng logo" />  
+          </div>
+          <div class="media-body">
+          <h4 class="media-heading strong-color">
+            OCEAN ASSOCIATE
+          </h4>
+          <h4 class="media-heading strong-color">
+            CHIA HOUNG MACHINERY
+          </h4>
+          <p>Established in 1981. We are manufacturers and exporters of tissue paper converting machines in Taiwan for 33 years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="contact-info">
+          <h4>Let's get in touch</h4>
+          {{#each info in contactInfo}}
+          <div class="media">
+            <span {{bind-attr class=":glyphicon info.icon :pull-left :heading-inverse"}}></span>
+            <div class="media-body">
+              <div class="media-heading heading-inverse">
+                {{info.key}}
+              </div>
+              <p class="p-inverse">{{info.value}}</p>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
     </div>
   </div>
 </div>

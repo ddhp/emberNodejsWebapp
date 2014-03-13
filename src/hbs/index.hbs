@@ -13,9 +13,15 @@
         </div>
         <h4>{{line.name}}</h4>
         <p class="featuring">
-          <span>featuring</span><br />
-          {{#each feature in line.features}}
-          {{feature}}<br />
+          <span class="heading">type</span><br />
+          {{#each type in line.types}}
+          {{type}}<br />
+          {{/each}}
+        </p>
+        <p class="featuring">
+          <span class="heading">option</span><br />
+          {{#each option in line.options}}
+          {{option}}<br />
           {{/each}}
         </p>
         {{#link-to "machine" line.id line.defaultMachine}}

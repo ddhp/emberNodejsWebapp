@@ -22,6 +22,7 @@ App.ContactRoute = Ember.Route.extend(
 )
 
 App.ContactController = Ember.ObjectController.extend(App.VerifyFormMixin,
+  contactInfo: App.ContactInfo # info of ocean
   formInputs: [{
     key: "name"
     isNecessary: true

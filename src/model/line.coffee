@@ -2,8 +2,11 @@ App.Lines = [{
   id: "facial-tissue-lines"
   name: "Facial Tissue Lines"
   image: "images/facial-tissue-line-1.jpg"
-  features: [
-    "Automatic Transfer Type"
+  types: [
+    "Automatic Interfolder Transfer"
+    "Manual Interfolder Transfer"
+  ]
+  options: [
     "Emboss Roll"
     "Lamination Unit"
   ]
@@ -13,9 +16,11 @@ App.Lines = [{
   id: "napkin-folders"
   name: "Napkin Folders"
   image: "images/napkin-folders-1.jpg"
-  features: [
-    "Vacuum Type"
-    "Multi-lane"
+  types: [
+    "Vacuum / Mechanical"
+    "Single / Multi lane"
+  ]
+  options: [
     "Kraft Paper Bander"
   ]
   machines: ["ch-330-series", "a500-dp", "a500-series"]
@@ -24,10 +29,15 @@ App.Lines = [{
   id: "hand-towel-lines"
   name: "Hand Towel Lines"
   image: "images/hand-towel-line.jpg"
-  features: [
-    "Automatic Transfer Type"
-    "Emboss Roll"
+  types: [
+    "V-Fold / Z-Fold"
+    "Automatic / Manual Transfer Type"
+  ]
+  options: [
+    "Steel to Steel / Steel to Ruber Emboss Roll"
     "Lamination Unit"
+    "Kraft Paper Bander"
+    "Log Saw"
   ]
   machines: ["300au-series"]
   defaultMachine: "300au-series"

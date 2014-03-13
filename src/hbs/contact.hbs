@@ -29,19 +29,20 @@
     </div>
 
     <div class="col-md-4"> 
-      <h4>Contact information</h4>
-      <dl>
-        <dt><span class="glyphicon glyphicon-home"></span>&nbsp;Address:</dt>
-        <dd>6F, No. 75, Sec. 3, Chung King North Road, Taipei 103, Taiwan</dd>
-        <dt><span class="glyphicon glyphicon-earphone"></span>&nbsp;Phone:</dt>
-        <dd>886-2-2597-1299</dd>
-        <dt><span class="glyphicon glyphicon-print"></span>&nbsp;Fax:</dt>
-        <dd>886-2-2597-1300</dd>
-        <dt><span class="glyphicon glyphicon-envelope"></span>&nbsp;E-mail:</dt>
-        <dd>ocn@ms12.hinet.net</dd>
-      </dl>
-
+      <div class="contact-info">
+        <h4>Contact information</h4>
+        {{#each info in contactInfo}}
+        <div class="media">
+          <span {{bind-attr class=":glyphicon info.icon :pull-left"}}></span>
+          <div class="media-body">
+            <div class="media-heading">
+              {{info.key}}
+            </div>
+            <p>{{info.value}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
-
   </div>
 </div>
