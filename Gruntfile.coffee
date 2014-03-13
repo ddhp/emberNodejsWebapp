@@ -37,6 +37,7 @@ scripts = {
     "view/verifyInput.js"
 
     # controller
+    "controller/application.js"
     "controller/index.js"
     "controller/lines.js"
     "controller/machine.js"

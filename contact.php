@@ -1,9 +1,9 @@
 <?php
-$name = $_POST[name];
-$company = $_POST[company];
-$userMessage = $_POST[message];
-$email = $_POST[email];
-$phone = $_POST[phone];
+$name = $_POST['name'];
+$company = $_POST['company'];
+$userMessage = $_POST['message'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
 if (($phone) == '') {
   $phone = "Not provided";
 };
