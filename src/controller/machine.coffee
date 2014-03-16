@@ -7,4 +7,8 @@ App.MachineRoute = App.BaseRoute.extend(
     )
 )
 
-App.MachineController = Ember.ObjectController.extend()
+App.MachineController = Ember.ObjectController.extend(
+  modelChange: (->
+    window.scrollTo(0, 0)
+  ).observes("model")
+)

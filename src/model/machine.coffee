@@ -13,7 +13,7 @@ App.Machines = [{
     lists: ["Point to Point Lamination System", "Nested Lamination System", "Steel to Steel Emboss Rolls", "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"]
   },{
     name: "Log Saw"
-    lists: ["Log Saw please find model: CH705"]
+    lists: ["Log Saw please find model: <a href='/#/product-lines/log-saw/ch-705-series'>CH705</a>"]
   },{
     name: "Packing"
     lists: ["Box Closing please find model: A016"]
@@ -33,7 +33,7 @@ App.Machines = [{
     lists: ["Point to Point Lamination System", "Nested Lamination System", "Steel to Steel Emboss Rolls", "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"]
   },{
     name: "Log Saw"
-    lists: ["Log Saw please find model: CH705"]
+    lists: ["Log Saw please find model: <a href='/#/product-lines/log-saw/ch-705-series'>CH705</a>"]
   },{
     name: "Packing"
     lists: ["Box Closing please find model: A016"]
@@ -113,5 +113,17 @@ App.Machines = [{
   producerImg: "images/chiaHoung-logo.png"
   description: "CH-300AU is multifold interfolder for hand towel porduction. The machine is provided with kraft paper bander and log saw for fully automatic operation<br />
   Steel to steel embossers for making 1-ply products and steel to rubber embossers with lamination unit for making 2-ply products are both available."
+
+},{
+
+  id: "ch-705-series"
+  serial: "CH 705 Series"
+  name: "Log Saw"
+  line: "log-saw"
+  image: "images/ch-705-series.jpg"
+  producer: "Chia Houng Machinery"
+  producerImg: "images/chiaHoung-logo.png"
+  description: "This machine is designed for cutting facial tissue or hand towel piles at a desired length. The whole equipment is consisting of conveyor unit, cutting head with a circular knife, grinding system and cutting/conveying belts."
+
 }]
 
