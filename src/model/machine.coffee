@@ -7,17 +7,16 @@ App.Machines = [{
   image: "images/ch-228-series.jpg"
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
-  description: "The newly developed Fully Auto Transfer Unitcan be selected to upgrade the standard interfolder to become a fully automatic solution.<br /> 
-  The cycle timing of the auto trasfer unit is adjustable to achieve different sheet count needs."
+  description: "The newly developed Fully Auto Transfer Unitcan be selected to upgrade the standard interfolder to become a fully automatic solution. The cycle timing of the auto trasfer unit is adjustable to achieve different sheet count needs. The auto transfer unit enables the integration of following packing system without additional labor cost."
   options: [{
     name: "Emboss and Lamination"
     lists: ["Point to Point Lamination System", "Nested Lamination System", "Steel to Steel Emboss Rolls", "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"]
   },{
-    name: "Compression and Log Saw"
+    name: "Log Saw"
     lists: ["Log Saw please find model: CH705"]
   },{
-    name: "Wrapper"
-    lists: ["Compression and Log Saw"]
+    name: "Packing"
+    lists: ["Box Closing please find model: A016"]
   }]
 },{
 
@@ -28,16 +27,16 @@ App.Machines = [{
   line: "facial-tissue-lines"
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
-  description: "The vertical type automatic trasfer Interfolder is developed for essembling in fully automatic converting line.<br /> The automatic separation and transfer device enables the "
+  description: "The vertical type automatic trasfer Interfolder is developed for essembling in fully automatic converting line.<br /> The automatic separation and transfer device enables the integration of following packing system without additional labor cost."
   options: [{
     name: "Emboss and Lamination"
     lists: ["Point to Point Lamination System", "Nested Lamination System", "Steel to Steel Emboss Rolls", "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"]
   },{
-    name: "Compression and Log Saw"
+    name: "Log Saw"
     lists: ["Log Saw please find model: CH705"]
   },{
-    name: "Wrapper"
-    lists: ["Compression and Log Saw"]
+    name: "Packing"
+    lists: ["Box Closing please find model: A016"]
   }]
 
 },{
@@ -54,9 +53,14 @@ App.Machines = [{
     name: "Emboss and Lamination"
     lists: [
       "point to point embossing and lamination unit for 1 and 2 deck"
-      "Drum printer with heater"
       "Steel to Steel Emboss Rolls"
       "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"
+    ]
+  },{
+    name: "Printing"
+    lists: [
+      "2-4 color printing"
+      "Drum Printer with heater"
     ]
   }]
 
@@ -86,10 +90,15 @@ App.Machines = [{
   options: [{
     name: "Emboss and Lamination"
     lists: [
-      "2-5 color printer (Rubber Rool or Doctor Chamber Type)"
-      "Drum printer with heater"
       "Steel to Steel Emboss Rolls"
       "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"
+      "Point to Point Embossing and Lamination Unit"
+    ]
+  },{
+    name: "Printing"
+    lists: [
+      "2-5 color printer (Rubber Rool or Doctor Chamber Type)"
+      "Drum printer with heater"
     ]
   }]
 
