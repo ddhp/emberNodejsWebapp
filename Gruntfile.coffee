@@ -88,6 +88,12 @@ module.exports = (grunt)->
 
     less:
       dev:
+        options: {
+          sourceMap: true
+          sourceMapFilename: 'less/less.map'
+          sourceMapURL: '../less/less.map'
+          sourceMapRootpath: '../'
+        }
         files:
           "css/app.css": "less/app.less"
       prod:
