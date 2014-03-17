@@ -29,6 +29,7 @@ scripts = {
     "model/machine.js"
     "model/line.js"
     "model/contact.js"
+    "model/about.js"
 
     # mixin
     "mixin/verifyForm.js"
@@ -76,6 +77,8 @@ scripts = {
 }
 
 # web spider variables
+title = "OCEAN ASSOCIATE CO. LTD - Facial tissue making machine, Paper napkin making machine, Single Multifold hand towel machine, Dispenser napkin folder, Compact fold napkin folder, Tall fold, Low fold napkin folder"
+
 keywords = "Facial tissue making machine, Paper napkin making machine, Single fold hand towel machine, Multifold hand towel machine, C-fold paper hand towel machine, Facial tissue log saw, Facial tissue interfolder Napkin folder, Luncheon napkin folder Beverage napkin folder, "
 
 description = "Ocean Associate is a leading Paper napkin making machine and Facial tissue making machine manufacturer specialized in Facial tissue making machine, Single fold hand towel machine, Multifold hand towel machine, Paper napkin making machine, Facial tissue log saw, C-fold paper hand towel machine, Napkin folder, Facial tissue interfolder, Beverage napkin folder, and Luncheon napkin folder."
@@ -117,6 +120,7 @@ module.exports = (grunt)->
         template: 'src/hbs/index.html.hbs'
         templateData:
           production: false
+          title: title
           appCss: 'css/app.css'
           libScripts: scripts.lib.dev
           appScript: "app.js"
@@ -128,6 +132,7 @@ module.exports = (grunt)->
         template: 'src/hbs/index.html.hbs'
         templateData:
           production: true
+          title: title
           appCss: 'css/app.min.css'
           libScripts: scripts.lib.prod
           appScript: "app.min.js"

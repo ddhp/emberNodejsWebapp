@@ -5,3 +5,5 @@ js/
 css/
 index.html
 */.DS_Store
+.DS_Store
+less/less.map

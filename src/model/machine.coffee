@@ -7,7 +7,12 @@ App.Machines = [{
   image: "images/ch-228-series.jpg"
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
-  description: "The newly developed Fully Auto Transfer Unitcan be selected to upgrade the standard interfolder to become a fully automatic solution. The cycle timing of the auto trasfer unit is adjustable to achieve different sheet count needs. The auto transfer unit enables the integration of following packing system without additional labor cost."
+  description: "CH-228 is our horizontal type facial tissue interfolder. The machine is equipped with edge embosser and vacuum folding head for clean cutting quality. Steel to Rubber Emboss and Lamination unit are available for making 2-ply product. "
+  extraSection: {
+    title: "Fully Automatic Transfer"
+    description: "The newly developed Fully Auto Transfer Unit can be selected to upgrade the standard interfolder to become a fully automatic solution. The cycle timing of the auto trasfer unit is adjustable to achieve different sheet count needs. The auto transfer unit enables the integration of following packing system without additional labor cost."
+    image: "images/ch-228-auto.jpg"
+  }
   options: [{
     name: "Emboss and Lamination"
     lists: ["Point to Point Lamination System", "Nested Lamination System", "Steel to Steel Emboss Rolls", "Steel to Rubber Emboss Rolls ( 2 or 4 Stations)"]
@@ -111,7 +116,7 @@ App.Machines = [{
   image: "images/300au-series.jpg"
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
-  description: "CH-300AU is multifold interfolder for hand towel porduction. The machine is provided with kraft paper bander and log saw for fully automatic operation<br />
+  description: "CH-300AU is multifold interfolder for hand towel production. The machine is provided with kraft paper bander and log saw for fully automatic operation<br />
   Steel to steel embossers for making 1-ply products and steel to rubber embossers with lamination unit for making 2-ply products are both available."
 
 },{
@@ -124,6 +129,17 @@ App.Machines = [{
   producer: "Chia Houng Machinery"
   producerImg: "images/chiaHoung-logo.png"
   description: "This machine is designed for cutting facial tissue or hand towel piles at a desired length. The whole equipment is consisting of conveyor unit, cutting head with a circular knife, grinding system and cutting/conveying belts."
+
+},{
+
+  id: "ch-168-series"
+  serial: "CH 168 Series"
+  name: "Bander"
+  line: "bander"
+  image: "images/ch-168-series.jpg"
+  producer: "Chia Houng Machinery"
+  producerImg: "images/chiaHoung-logo.png"
+  description: "Ch168 series is our efficient solution to band hand towel paper logs or pack of dispenser napkin.This machine can be easily connected auto transfer unit for interfolder or napkin folder to consist a fully automatic converting line."
 
 }]
 

@@ -6,6 +6,14 @@
 <h5>Description</h5>
 <p>{{{description}}}</p>
 
+{{#if extraSection}}
+{{#with extraSection}}
+<h5>{{title}}</h5>
+<img {{bind-attr src=image}} alt="Napkin Folder CH-228 Fully Automatic Transfer" />
+<p>{{{description}}}</p>
+{{/with}}
+{{/if}}
+
 {{#if options}}
 <h5>Options</h5>
 {{#each option in options}}
