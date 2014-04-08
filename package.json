@@ -32,7 +32,8 @@
     "ember-template-compiler": "~1.4.0-beta.1",
     "grunt-ember-templates": "~0.4.18",
     "less": "~1.6.3",
-    "grunt-contrib-less": "~0.9.0"
+    "grunt-contrib-less": "~0.9.0",
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "express": "~3.4.8",

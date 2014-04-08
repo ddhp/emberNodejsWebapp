@@ -38,11 +38,11 @@ app.use(express.static(baseDir))
 # ))
 # 
 # compress response
-# app.use(express.compress())
+app.use(express.compress())
 
 # parse request body
-# app.use(express.json())
-# app.use(express.urlencoded())
+app.use(express.json())
+app.use(express.urlencoded())
 
 # authentication
 # passport = require("passport")
@@ -52,4 +52,4 @@ app.use(express.static(baseDir))
 # app.use passport.session()
 
 # define routes
-
+require("./postController").defineRoutes(app)
