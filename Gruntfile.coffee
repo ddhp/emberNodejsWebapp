@@ -115,6 +115,11 @@ module.exports = (grunt)->
       default:
         options:
           templateBasePath: /src\/hbs\//
+          templateName: (filename) ->
+            return if filename is "index.html"
+            target = filename.replace(/\./g, '/')
+            grunt.log.writeln "compiling #{filename} to #{target}"
+            target
         files:
           'src/hbs/emberHbs.js': 'src/hbs/**/*.hbs'
 
