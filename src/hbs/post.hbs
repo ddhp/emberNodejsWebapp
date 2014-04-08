@@ -1,0 +1,13 @@
+<button class="btn btn-primary" {{action "activateEdit"}}>Edit</button>
+{{#unless isEditing}}
+<h1>{{model.title}}</h1>
+<p>By {{model.author}} on {{model.create_time}}</p>
+<p>{{model.article}}</p>
+{{else}}
+<h1>
+{{input value=model.title class="form-control"}}
+</h1>
+<p>By {{model.author}} on {{model.create_time}}</p>
+{{input value=model.article class="form-control"}}
+<button class="btn btn-success" {{action save}}>Save</button>
+{{/unless}}

@@ -1,4 +1,4 @@
-[].push.call(App.pages, App.Page.create(
-    id: "example"
-  )
-)
+# App.Page stores info for each page which is used by Navigation Controller
+# App.Page.create(
+#   id: "example"
+# )
